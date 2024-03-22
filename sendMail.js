@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: process.env.USER,
-    password: process.env.APP_PASSWORD,
+    pass: process.env.APP_PASSWORD,
   },
 });
 
@@ -20,7 +20,7 @@ const mailOptions = {
     address: process.env.USER
   }, 
   to: ["fernandadias709@gmail.com"],
-  subjetct: 'Send email from GMAIL SMTP', //assunto do email
+  subject: 'Send email from GMAIL SMTP', //assunto do email
   text: 'Send email from GMAIL SMTP', //corpo do email texto
   html: '<b>Hello world!<b>' //corpo do email html
 };
